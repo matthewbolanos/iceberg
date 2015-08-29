@@ -90,12 +90,8 @@ $dark:                            #444 !default;
     text-transform: uppercase; }
 
 .actual {
-  background: #FFF;
-  top: -1000px; }
-
-.starting {
   background: #FF6633;
-  top: -100px; }
+  top: -1000px; }
 
 .optimal {
   background: #7BEEFF;
