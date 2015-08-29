@@ -95,7 +95,11 @@ h1.title {
 .item {
 	background-color: transparent;
 	border: none;
-	padding: 10px 50px;
+	padding: 5px 50px;
+
+	&.active {
+		background-color: transparent;
+	}
 }
 
 .item.choose-beer {
@@ -151,6 +155,7 @@ h1.title {
 	width:100%;
 	background-color: white;
 	color: $dark;
+	margin-top:20px;
 }
 
 .button-bar.button-bar-checkbox {
@@ -178,11 +183,13 @@ hr {
 	background: $assertive;
 	height: 1px;
 	border:none;
-	margin: 20px 0;
+	margin-bottom: 20px;
 }
 
 .item-checkbox {
 	color: $light;
+	padding: 15px 50px;
+	text-transform: uppercase;
 
 	.checkbox {
 		left:43px;
@@ -193,6 +200,25 @@ hr {
 			float: right;
 		}
 	}
+
+	&.active {
+		color: white;
+	}
+}
+
+.checkbox input:before, .checkbox-icon:before {
+	background-color:transparent;
+	border-color: $light;
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+	background-color: transparent;
+	border-color: $assertive;
+	border-width: 1px;
+}
+
+.checkbox input:after, .checkbox-icon:after {
+	border-color: $assertive;
 }
 
 .pull-left {
