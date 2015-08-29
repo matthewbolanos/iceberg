@@ -5,18 +5,13 @@
     .controller('FormController', FormController)
     .controller("BeerStatusController", BeerStatusController);
 
-  function BeerStatusController($scope, BeerFormService, ScaleService) {
-    var vm = this;
-    vm.model = BeerFormService;
-    vm.optimal = {
-      'top': ScaleService.calculate(BeerFormService.servingTemp) + 'px'
-    }
-  }
-
-  function BeerStatusController($scope, BeerFormService, $ionicPopup, MediaService) {
+  function BeerStatusController($scope, BeerFormService, $ionicPopup, MediaService, ScaleService) {
     var vm = this;
     this.model = BeerFormService;
 
+    vm.optimal = {
+      'top': ScaleService.calculate(BeerFormService.servingTemp) + 'px'
+    }
 
     // An alert dialog
     $scope.showWarningAlert = function() {
