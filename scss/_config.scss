@@ -15,6 +15,13 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+
+$dark:						#272822;
+$assertive:					#c1a64d;
+$light:						#a2acb1;
+
+$base-background-color: 	$dark;
+
 @import "mixins/animations";
 
 // The path for our ionicons font files, relative to the built CSS in www/css

@@ -6,7 +6,7 @@
 .scroll-content {
   background: #262626;
   color: #fff;
-}
+} 
 
 .beerAnimation {
   position: relative;
@@ -66,3 +66,129 @@
     z-index: 7;
   }
 }
+
+
+#logo {
+	width:40%;
+	margin: auto;
+	margin-top:40px;
+	margin-bottom:40px;
+	display:block;
+}
+
+.item {
+	background-color: transparent;
+	border: none;
+	padding: 10px 50px;
+}
+
+.item.choose-beer {
+	text-align:center;
+	font-size: 1.5em;
+	font-weight: 700;
+	color:white;
+	text-transform: uppercase;
+	padding-bottom:15px;
+	margin-bottom:25px;
+	padding-right:80px;
+	padding-left:80px;
+	position:relative;
+
+	&.activated {
+		background-color: transparent;
+	}
+
+	&:before {
+		content: '';
+		position:absolute;
+		left:50px;
+		right:50px;
+		bottom:0;
+		border-bottom: 1px solid $assertive;
+	}
+
+	.item-note {
+		right:60px;
+		display:inline-block;
+		position:absolute;
+		color: $assertive;
+	}
+}
+
+.button.button-container, .button.button-go-chill {
+	background-color: transparent;
+	height: 44px;
+	border-radius: 22px;
+	color: $light;
+	border: 1px solid $light;
+	width: 48%;
+	text-transform: uppercase;
+	color: $light;
+
+	&.active {
+		border: 1px solid $assertive;
+		color: white;
+	}
+}
+
+.button.button-go-chill {
+	width:100%;
+	background-color: white;
+	color: $dark;
+}
+
+.button-bar.button-bar-checkbox {
+	.button {
+		background-color:transparent;
+		border:none;
+		color:$light;
+
+		&.active {
+			color: white;
+
+			&:before {
+				font-family: "Ionicons";
+				content: "\f122";
+				color: $assertive;
+				margin-left: -18px;
+				position: absolute;
+			}
+		}
+
+	}
+}
+
+hr {
+	background: $assertive;
+	height: 1px;
+	border:none;
+	margin: 20px 0;
+}
+
+.item-checkbox {
+	color: $light;
+
+	.checkbox {
+		left:43px;
+		right:43px;
+		color: $light;	
+
+		input {
+			float: right;
+		}
+	}
+}
+
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+
+
+
+a {
+  //@include animation('testSpin' 5s 0s);
+}
+

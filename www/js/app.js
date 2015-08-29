@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('starter', ['ionic', 'app.controllers'])
+  angular.module('starter', ['ionic', 'app.controllers', 'app.services'])
     .run(AppRun)
     .config(AppConfig);
 
@@ -19,8 +19,13 @@
     $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'templates/list.html',
-      controller: 'ListController'
+      templateUrl: 'templates/form.html',
+      controller: 'FormController'
+    })
+    .state('beer-status', {
+      url: '/beer-status',
+      templateUrl: 'templates/beer-status.html',
+      controller: 'BeerStatusController'
     })
     .state('beerReview', {
       url: '/beerReview',

@@ -1,0 +1,12 @@
+<ion-modal-view>
+    <ion-header-bar>
+    	<h1 class="title">Select Your Beer</h1>
+    </ion-header-bar>
+    <ion-content>
+	    <div class="list">
+			<a class="item" ng-repeat="beer in beers" ng-click="selectBeer(beer)">
+				{{beer}}
+			</a>
+		</div>
+    </ion-content>
+</ion-modal-view>
