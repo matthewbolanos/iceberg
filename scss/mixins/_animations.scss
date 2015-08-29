@@ -55,9 +55,9 @@
 
 @include keyframes(bubbly) {
   0% {
-    -ms-transform: translateY(20px); /* IE 9 */
-    -webkit-transform: translateY(20px); /* Safari */
-    transform: translateY(20px);
+    -ms-transform: translateY(0px); /* IE 9 */
+    -webkit-transform: translateY(0px); /* Safari */
+    transform: translateY(0px);
     opacity: 0;
   }
   50% {
