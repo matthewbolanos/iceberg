@@ -89,11 +89,11 @@ $dark:                            #444 !default;
     opacity: 1; }
 
   100% {
-    -ms-transform: translate(0, -30px);
+    -ms-transform: translate(0, -50px);
     /* IE 9 */
-    -webkit-transform: translate(0, -30px);
+    -webkit-transform: translate(0, -50px);
     /* Safari */
-    transform: translate(0, -30px);
+    transform: translate(0, -50px);
     opacity: 0; } }
 
 @-moz-keyframes bubbly {
@@ -114,11 +114,11 @@ $dark:                            #444 !default;
     opacity: 1; }
 
   100% {
-    -ms-transform: translate(0, -30px);
+    -ms-transform: translate(0, -50px);
     /* IE 9 */
-    -webkit-transform: translate(0, -30px);
+    -webkit-transform: translate(0, -50px);
     /* Safari */
-    transform: translate(0, -30px);
+    transform: translate(0, -50px);
     opacity: 0; } }
 
 @-ms-keyframes bubbly {
@@ -139,11 +139,11 @@ $dark:                            #444 !default;
     opacity: 1; }
 
   100% {
-    -ms-transform: translate(0, -30px);
+    -ms-transform: translate(0, -50px);
     /* IE 9 */
-    -webkit-transform: translate(0, -30px);
+    -webkit-transform: translate(0, -50px);
     /* Safari */
-    transform: translate(0, -30px);
+    transform: translate(0, -50px);
     opacity: 0; } }
 
 @-o-keyframes bubbly {
@@ -164,11 +164,11 @@ $dark:                            #444 !default;
     opacity: 1; }
 
   100% {
-    -ms-transform: translate(0, -30px);
+    -ms-transform: translate(0, -50px);
     /* IE 9 */
-    -webkit-transform: translate(0, -30px);
+    -webkit-transform: translate(0, -50px);
     /* Safari */
-    transform: translate(0, -30px);
+    transform: translate(0, -50px);
     opacity: 0; } }
 
 @keyframes bubbly {
@@ -189,11 +189,11 @@ $dark:                            #444 !default;
     opacity: 1; }
 
   100% {
-    -ms-transform: translate(0, -30px);
+    -ms-transform: translate(0, -50px);
     /* IE 9 */
-    -webkit-transform: translate(0, -30px);
+    -webkit-transform: translate(0, -50px);
     /* Safari */
-    transform: translate(0, -30px);
+    transform: translate(0, -50px);
     opacity: 0; } }
 
 .disabled {
