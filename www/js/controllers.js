@@ -8,14 +8,15 @@
 
   function BeerStatusController($scope, $state, BeerFormService, $ionicPopup, MediaService, ScaleService) {
     var vm = this;
-    vm.model = BeerFormService;
+    this.model = BeerFormService;
+    $scope.model = BeerFormService;
     vm.scaleService = ScaleService;
-
-    console.log(BeerFormService.servingTemp);
 
     if (!BeerFormService.servingTemp) {
       $state.go('home');
     }
+
+
 
     // An alert dialog
     $scope.showWarningAlert = function() {
@@ -54,6 +55,13 @@
         ]
       });
     };
+
+    $scope.$watch('model.currentTemp', function(newValue, oldValue) {
+      if (!$scope.model.alerted && parseFloat($scope.model.servingTemp) > parseFloat(newValue)) {
+        $scope.showReadyAlert2();
+        $scope.model.alerted = true;
+      }
+    });
   }
 
   function FormController($scope, $state, $ionicModal, BeerService, BeerFormService) {
@@ -70,9 +78,9 @@
     };
 
     $scope.ready = function () {
-      console.log(!!BeerFormService.servingTemp);
       return !!BeerFormService.servingTemp;
     };
+
 
     $ionicModal.fromTemplateUrl('templates/beer-selection.html', {
       scope: $scope,
