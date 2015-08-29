@@ -52,3 +52,24 @@
     @include transform("rotate(500deg)");
   }
 }
+
+@include keyframes(bubbly) {
+  0% {
+    -ms-transform: translate(0, 20px); /* IE 9 */
+    -webkit-transform: translate(0, 20px); /* Safari */
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  50% {
+    -ms-transform: translate(0, 0px); /* IE 9 */
+    -webkit-transform: translate(0, 0px); /* Safari */
+    transform: translate(0, 0px);
+    opacity: 1;
+  }
+  100% {
+    -ms-transform: translate(0,-30px); /* IE 9 */
+    -webkit-transform: translate(0,-30px); /* Safari */
+    transform: translate(0,-30px);
+    opacity: 0;
+  }
+}

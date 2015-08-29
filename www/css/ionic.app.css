@@ -71,6 +71,131 @@ $dark:                            #444 !default;
     -webkit-transform: rotate(500deg);
     transform: rotate(500deg); } }
 
+@-webkit-keyframes bubbly {
+  0% {
+    -ms-transform: translate(0, 20px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 20px);
+    /* Safari */
+    transform: translate(0, 20px);
+    opacity: 0; }
+
+  50% {
+    -ms-transform: translate(0, 0px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 0px);
+    /* Safari */
+    transform: translate(0, 0px);
+    opacity: 1; }
+
+  100% {
+    -ms-transform: translate(0, -30px);
+    /* IE 9 */
+    -webkit-transform: translate(0, -30px);
+    /* Safari */
+    transform: translate(0, -30px);
+    opacity: 0; } }
+
+@-moz-keyframes bubbly {
+  0% {
+    -ms-transform: translate(0, 20px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 20px);
+    /* Safari */
+    transform: translate(0, 20px);
+    opacity: 0; }
+
+  50% {
+    -ms-transform: translate(0, 0px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 0px);
+    /* Safari */
+    transform: translate(0, 0px);
+    opacity: 1; }
+
+  100% {
+    -ms-transform: translate(0, -30px);
+    /* IE 9 */
+    -webkit-transform: translate(0, -30px);
+    /* Safari */
+    transform: translate(0, -30px);
+    opacity: 0; } }
+
+@-ms-keyframes bubbly {
+  0% {
+    -ms-transform: translate(0, 20px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 20px);
+    /* Safari */
+    transform: translate(0, 20px);
+    opacity: 0; }
+
+  50% {
+    -ms-transform: translate(0, 0px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 0px);
+    /* Safari */
+    transform: translate(0, 0px);
+    opacity: 1; }
+
+  100% {
+    -ms-transform: translate(0, -30px);
+    /* IE 9 */
+    -webkit-transform: translate(0, -30px);
+    /* Safari */
+    transform: translate(0, -30px);
+    opacity: 0; } }
+
+@-o-keyframes bubbly {
+  0% {
+    -ms-transform: translate(0, 20px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 20px);
+    /* Safari */
+    transform: translate(0, 20px);
+    opacity: 0; }
+
+  50% {
+    -ms-transform: translate(0, 0px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 0px);
+    /* Safari */
+    transform: translate(0, 0px);
+    opacity: 1; }
+
+  100% {
+    -ms-transform: translate(0, -30px);
+    /* IE 9 */
+    -webkit-transform: translate(0, -30px);
+    /* Safari */
+    transform: translate(0, -30px);
+    opacity: 0; } }
+
+@keyframes bubbly {
+  0% {
+    -ms-transform: translate(0, 20px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 20px);
+    /* Safari */
+    transform: translate(0, 20px);
+    opacity: 0; }
+
+  50% {
+    -ms-transform: translate(0, 0px);
+    /* IE 9 */
+    -webkit-transform: translate(0, 0px);
+    /* Safari */
+    transform: translate(0, 0px);
+    opacity: 1; }
+
+  100% {
+    -ms-transform: translate(0, -30px);
+    /* IE 9 */
+    -webkit-transform: translate(0, -30px);
+    /* Safari */
+    transform: translate(0, -30px);
+    opacity: 0; } }
+
 .disabled {
   background: #a2acb1; }
 
@@ -7929,6 +8054,8 @@ h1.title {
         right: 18px;
         font-size: 20px; }
   .beerAnimation .drops {
+    -webkit-animation: bubbly 5s 1s infinite;
+    animation: bubbly 5s 1s infinite;
     position: absolute;
     top: 0;
     left: 0;
