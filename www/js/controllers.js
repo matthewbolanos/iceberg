@@ -12,7 +12,6 @@
   function AnimationController() {
     var vm = this;
     vm.name = "Mike";
-    alert("Cool")
   }
 
 })();
