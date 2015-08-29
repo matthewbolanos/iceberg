@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('starter', ['ionic', 'app.controllers'])
+  angular.module('starter', ['ionic', 'app.controllers', 'app.services'])
     .run(AppRun)
     .config(AppConfig);
 
@@ -17,10 +17,15 @@
 
   function AppConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-    .state('beerReview', {
-      url: '/beerReview',
-      templateUrl: 'templates/beerReview.html',
-      controller: 'BeerReviewController'
+    .state('home', {
+      url: '/',
+      templateUrl: 'templates/form.html',
+      controller: 'FormController'
+    })
+    .state('beer-status', {
+      url: '/beer-status',
+      templateUrl: 'templates/beer-status.html',
+      controller: 'BeerStatusController'
     })
     $urlRouterProvider.otherwise('/')
   }

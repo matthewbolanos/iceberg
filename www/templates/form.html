@@ -1,0 +1,72 @@
+<ion-view view-title="Iceberg">
+	<ion-pane>
+		<img src="img/logo.png" id="logo"/>
+		<div class="list">
+			<a class="item choose-beer" ng-click="openModal()">
+			    {{model.beer ? model.beer : 'Choose Beer'}}
+			    <span class="item-note">
+			    	<i class="ion-chevron-down"></i>
+			    </span>
+			</a>
+			<div class="item">
+				  <a class="button button-container pull-left" ng-click="model.container = 'bottle'"
+				  	 ng-class="model.container == 'bottle' ? 'active' : ''">Bottle</a>
+				  <a class="button button-container pull-right" ng-click="model.container = 'can'"
+				  	 ng-class="model.container == 'can' ? 'active' : ''">Can</a>
+			</div>
+			<div ng-switch="model.container">
+				<div class="item" ng-switch-when="can">
+				    <div class="button-bar button-bar-checkbox ">
+					  <a class="button" ng-click="model.containerSize = '12oz'"
+					  	 ng-class="model.containerSize == '12oz' ? 'active' : ''">12oz</a>
+					  <a class="button" ng-click="model.containerSize = '16oz'"
+					  	  ng-class="model.containerSize == '16oz' ? 'active' : ''">16oz</a>
+					  <a class="button" ng-click="model.containerSize = '24oz'"
+					  	  ng-class="model.containerSize == '24oz' ? 'active' : ''">24oz</a>
+					</div>
+				</div>
+				<div class="item" ng-switch-when="bottle">
+				    <div class="button-bar button-bar-checkbox">
+					  <a class="button" ng-click="model.containerSize = '12oz'"
+					  	 ng-class="model.containerSize == '12oz' ? 'active' : ''">12oz</a>
+					  <a class="button" ng-click="model.containerSize = '20oz'"
+					  	  ng-class="model.containerSize == '20oz' ? 'active' : ''">20oz</a>
+					  <a class="button" ng-click="model.containerSize = '40oz'"
+					  	  ng-class="model.containerSize == '40oz' ? 'active' : ''">40oz</a>
+					</div>
+				</div>
+			</div>
+
+			<hr/>
+
+			<div class="item item-checkbox">
+				Push Notification
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>
+			</div>
+
+			<div class="item">
+				  <a class="button button-go-chill" ui-sref="beer-status">Go Chill</a>
+			</div>
+			<!--<div class="item item-toggle">
+				Alarm
+				<label class="toggle toggle-assertive">
+					<input type="checkbox">
+					<div class="track">
+						<div class="handle"></div>
+					</div>
+				</label>
+			</div>
+			<div class="item item-toggle">
+				Push Notification
+				<label class="toggle toggle-assertive">
+					<input type="checkbox">
+					<div class="track">
+						<div class="handle"></div>
+					</div>
+				</label>
+			</div>-->
+		</div>
+	</ion-pane>
+</ion-view>

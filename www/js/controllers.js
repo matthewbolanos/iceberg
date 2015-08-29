@@ -1,14 +1,52 @@
 (function() {
 
   angular
-    .module('app.controllers', [])
-    .controller("BeerReviewController", BeerReviewController);
+    .module('app.controllers', ['app.services','ngAnimate'])
+    .controller('FormController', FormController)
+    .controller("BeerStatusController", BeerStatusController)
+    .controller("AnimationController", AnimationController);
 
-  function BeerReviewController() {
-    var vm = this;
-    alert("yes")
+  function BeerStatusController($scope, BeerFormService) {
+    $scope.model = BeerFormService;
   }
 
+  function FormController($scope, $ionicModal, BeerService, BeerFormService) {
+    $scope.beers = BeerService.getBeers();
+
+    $scope.model = BeerFormService;
+
+    $ionicModal.fromTemplateUrl('templates/beer-selection.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+    $scope.openModal = function() {
+      $scope.modal.show();
+    };
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+    };
+    $scope.selectBeer = function(beer) {
+      $scope.model.beer = beer;
+      $scope.model.servingTemp = 52;
+      $scope.modal.hide();
+    }
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+    });
+    // Execute action on hide modal
+    $scope.$on('modal.hidden', function() {
+      // Execute action
+    });
+    // Execute action on remove modal
+    $scope.$on('modal.removed', function() {
+      // Execute action
+    });
+  }
+
+  // Just testing out some animation stuffs
   function Animations() {
     var vm = this;
     var Sprite = {
