@@ -59,7 +59,7 @@
 			</div>
 
 			<div class="item">
-				  <a class="button button-go-chill" ui-sref="beer-status">Go Chill</a>
+				  <a class="button button-go-chill" ng-class="{ disabled: !ready() }" ng-click="chill()">Go Chill</a>
 			</div>
 			<!--<div class="item item-toggle">
 				Alarm
