@@ -5,7 +5,7 @@
     .controller('FormController', FormController)
     .controller("BeerStatusController", BeerStatusController);
 
-  function BeerStatusController($scope, BeerFormService, $ionicPopup) {
+  function BeerStatusController($scope, BeerFormService, $ionicPopup, MediaService) {
     var vm = this;
     this.model = BeerFormService;
 
@@ -56,7 +56,25 @@
     };
     $scope.selectBeer = function(beer) {
       $scope.model.beer = beer;
-      $scope.model.servingTemp = 52;
+      switch (beer) {
+        case "Craft/Malt Beer":
+          $scope.model.servingTemp = 52;
+        break;
+        case "Standard Ale":
+        case "Amber Lager":
+        case "Dark Lager":
+        case "Cider":
+          $scope.model.servingTemp = 46;
+        break;
+        case "Pale Lager":
+        case "Light Ale":
+          $scope.model.servingTemp = 41;
+        break;
+        case "Light Beer":
+          $scope.model.servingTemp = 34;
+        break;
+      }
+
       $scope.modal.hide();
     }
     //Cleanup the modal when we're done with it!
