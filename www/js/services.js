@@ -20,14 +20,26 @@
     return beers;
   }
 
-  function BeerFormService() {
+  function BeerFormService($interval, $timeout, $http) {
     model = {
       beer: "Surly Brewing Darkness",
       container: "",
       containerSize: "",
       servingTemp: 52,
-      currentTemp: null
+      currentTemp: "--"
     }
+
+    getUpdates($timeout, $http);
+
+    function getUpdates($timeout, $http) {
+      $http.jsonp("http://bartender.mybluemix.net/beer/1?callback=JSON_CALLBACK").then(function(response) {
+        model.currentTemp = response.data.temperature.toFixed(1);
+        $timeout(function() {
+          getUpdates($timeout, $http);
+        }, 5000);
+      });
+    }
+
     return model;
   }
 

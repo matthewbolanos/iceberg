@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('starter', ['ionic', 'app.controllers', 'app.services'])
+  angular.module('starter', ['ionic', 'ngCordova', 'app.controllers', 'app.services'])
     .run(AppRun)
     .config(AppConfig);
 
