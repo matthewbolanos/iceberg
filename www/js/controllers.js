@@ -3,8 +3,7 @@
   angular
     .module('app.controllers', ['app.services','ngAnimate'])
     .controller('FormController', FormController)
-    .controller("BeerStatusController", BeerStatusController)
-    .controller("AnimationController", AnimationController);
+    .controller("BeerStatusController", BeerStatusController);
 
   function BeerStatusController($scope, BeerFormService) {
     $scope.model = BeerFormService;

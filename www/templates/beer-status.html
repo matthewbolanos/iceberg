@@ -1,5 +1,14 @@
-<ion-view view-title="{{model.beer}}">
-  <ion-content>
-  	
-  </ion-content>
+<ion-view>
+  <ion-pane ng-controller="BeerStatusController as vm">
+    <h1 class="title">{{model.beer}}</h1>
+
+    <div class="beerAnimation">
+      <div class="glass"></div>
+      <div class="liquid"></div>
+      <div class="drops"></div>
+      <div class="mess"></div>
+    </div>
+    <input ng-model="vm.selectedRange" ng-change="vm.updateBeerAnimation(vm.selectedRange)" style="margin-top: 300px; width: 500px" step="1" type="range" min="-180" max="180"/>
+
+  </ion-pane>
 </ion-view>

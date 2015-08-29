@@ -2,11 +2,27 @@
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic);
+
+body {
+  font-family: Lato;
+}
 
 .scroll-content {
   background: #262626;
   color: #fff;
-} 
+}
+
+h1.title {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-family: Lato;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
 .beerAnimation {
   position: relative;
@@ -171,7 +187,7 @@ hr {
 	.checkbox {
 		left:43px;
 		right:43px;
-		color: $light;	
+		color: $light;
 
 		input {
 			float: right;
