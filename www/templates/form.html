@@ -35,14 +35,26 @@
 					  	  ng-class="model.containerSize == '40oz' ? 'active' : ''">40oz</a>
 					</div>
 				</div>
+				<div class="item" ng-switch-default>
+				    <div class="button-bar button-bar-checkbox">
+					  <a class="button"> </a>
+					</div>
+				</div>
 			</div>
 
 			<hr/>
 
-			<div class="item item-checkbox">
+			<div class="item item-checkbox" ng-class="model.push ? 'active' : ''">
 				Push Notification
 				<label class="checkbox">
-					<input type="checkbox">
+					<input type="checkbox" ng-model="model.push">
+				</label>
+			</div>
+
+			<div class="item item-checkbox" ng-class="model.alarm ? 'active' : ''">
+				Alarm Sound
+				<label class="checkbox">
+					<input type="checkbox" ng-model="model.alarm">
 				</label>
 			</div>
 
