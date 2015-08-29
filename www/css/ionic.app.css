@@ -2786,10 +2786,10 @@ ion-infinite-scroll {
   top: 137px; }
 
 .has-footer {
-  bottom: 44px; }
+  bottom: 75px; }
 
 .has-subfooter {
-  bottom: 88px; }
+  bottom: 119px; }
 
 .has-tabs, .bar-footer.has-tabs {
   bottom: 49px; }
@@ -2798,7 +2798,7 @@ ion-infinite-scroll {
     height: auto; }
 
 .has-footer.has-tabs {
-  bottom: 93px; }
+  bottom: 124px; }
 
 .pane {
   -webkit-transform: translate3d(0, 0, 0);
@@ -3505,7 +3505,7 @@ a.subdued {
   border-top-width: 1px;
   border-bottom-width: 0;
   background-position: top;
-  height: 44px; }
+  height: 75px; }
   .bar-footer.item-input-inset {
     position: absolute; }
 
@@ -3518,7 +3518,7 @@ a.subdued {
   height: 44px; }
 
 .bar-subfooter {
-  bottom: 44px;
+  bottom: 75px;
   display: block;
   height: 44px; }
 
@@ -7757,7 +7757,8 @@ a.button {
   transition-duration: 0s; }
 
 body {
-  font-family: Lato; }
+  font-family: Lato;
+  background: #262626; }
 
 .scroll-content {
   background: #262626;
@@ -7839,7 +7840,7 @@ h1.title {
   background-color: transparent;
   border: none;
   padding: 5px 50px; }
-  .item.active {
+  .item.active, .item.activated {
     background-color: transparent; }
 
 .item.choose-beer {
@@ -7853,8 +7854,6 @@ h1.title {
   padding-right: 80px;
   padding-left: 80px;
   position: relative; }
-  .item.choose-beer.activated {
-    background-color: transparent; }
   .item.choose-beer:before {
     content: '';
     position: absolute;
@@ -7885,7 +7884,9 @@ h1.title {
   width: 100%;
   background-color: white;
   color: #262626;
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 1.5em; }
 
 .button-bar.button-bar-checkbox .button {
   background-color: transparent;
@@ -7930,6 +7931,16 @@ hr {
 
 .checkbox input:after, .checkbox-icon:after {
   border-color: #c1a64d; }
+
+.bar.bar-footer {
+  background-color: #262626;
+  background-image: none;
+  border-bottom: none;
+  border-top: 1px solid #c1a64d;
+  box-shadow: none; }
+  .bar.bar-footer .title {
+    height: 75px;
+    line-height: 74px; }
 
 .pull-left {
   float: left; }

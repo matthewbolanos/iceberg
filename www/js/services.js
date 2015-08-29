@@ -10,10 +10,14 @@
 
     beers.getBeers = function() {
       return [
-        "Dale’s Pale Ale",
-        "Breckenridge Vanilla Porter",
-        "Brooklyn Brewery Lager",
-        "Surly Brewing Darkness"
+        "Craft/Malt Beer",
+        "Standard Ale",
+        "Amber Lager",
+        "Dark Lager",
+        "Cider",
+        "Pale Lager",
+        "Light ALe",
+        "Light Beer"
       ]
     }
 

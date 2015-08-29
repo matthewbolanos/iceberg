@@ -6,6 +6,7 @@
 
 body {
   font-family: Lato;
+  background: #262626;
 }
 
 .scroll-content {
@@ -97,7 +98,7 @@ h1.title {
 	border: none;
 	padding: 5px 50px;
 
-	&.active {
+	&.active, &.activated {
 		background-color: transparent;
 	}
 }
@@ -114,9 +115,6 @@ h1.title {
 	padding-left:80px;
 	position:relative;
 
-	&.activated {
-		background-color: transparent;
-	}
 
 	&:before {
 		content: '';
@@ -156,6 +154,8 @@ h1.title {
 	background-color: white;
 	color: $dark;
 	margin-top:20px;
+	font-weight: 700;
+	font-size:1.5em;
 }
 
 .button-bar.button-bar-checkbox {
@@ -219,6 +219,19 @@ hr {
 
 .checkbox input:after, .checkbox-icon:after {
 	border-color: $assertive;
+}
+
+.bar.bar-footer {
+	background-color: $dark;
+	background-image: none;
+	border-bottom:none;
+	border-top: 1px solid $assertive;
+	box-shadow:none;
+
+	.title {
+		height: 75px;
+		line-height: 74px;
+	}
 }
 
 .pull-left {
