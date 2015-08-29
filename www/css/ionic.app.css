@@ -7959,7 +7959,8 @@ hr {
   text-transform: uppercase;
   text-align: center;
   font-size: 1.3em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  background-color: white; }
   .popup-body strong {
     color: #c1a64d;
     font-size: 1.6em; }
