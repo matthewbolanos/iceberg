@@ -6,7 +6,8 @@
     .controller("BeerStatusController", BeerStatusController);
 
   function BeerStatusController($scope, BeerFormService) {
-    $scope.model = BeerFormService;
+    var vm = this;
+    this.model = BeerFormService;
   }
 
   function FormController($scope, $ionicModal, BeerService, BeerFormService) {
