@@ -10,5 +10,63 @@
     </div>
     <input ng-model="vm.selectedRange" ng-change="vm.updateBeerAnimation(vm.selectedRange)" style="margin-top: 300px; width: 500px" step="1" type="range" min="-180" max="180"/>
 
+    <span class="system">&deg Fahrenheit</span>
+    <div class="scale">
+      <div class="marker actual">
+        <span>Actual</span>
+      </div>
+      <div class="marker optimal" ng-style="vm.optimal">
+        <span>Optimal</span>
+      </div>
+      <div class="marker starting">
+        <span>Starting</span>
+      </div>
+      <div class="container">
+        <div class="notch">
+          <div class="ten"></div>
+          <span>80&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>70&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>60&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>50&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>40&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>30&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>20&deg</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="line">
+      <div class="half">
+        <a ui-sref="home" class="button button-container small">Back</a>
+      </div>
+      <div class="half">
+        <a ui-sref="settings" class="button button-container small">Settings</a>
+      </div>
+    </div>
+
   </ion-pane>
 </ion-view>
