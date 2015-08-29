@@ -71,6 +71,18 @@ $dark:                            #444 !default;
     -webkit-transform: rotate(500deg);
     transform: rotate(500deg); } }
 
+.disabled {
+  background: #a2acb1; }
+
+a.button.button-go-chill:active {
+  background: #c1a64d;
+  border-color: #c1a64d;
+  color: #FFF; }
+
+a.small.back:active {
+  border-color: #c1a64d;
+  color: #FFF; }
+
 .title {
   font-weight: bold; }
 
@@ -102,7 +114,7 @@ $dark:                            #444 !default;
   font-size: 12px;
   position: absolute;
   right: 10px;
-  top: 65px;
+  top: 115px;
   text-transform: uppercase; }
 
 .scale {
@@ -110,7 +122,7 @@ $dark:                            #444 !default;
   position: absolute;
   left: 10px;
   right: 10px;
-  top: 100px;
+  top: 150px;
   width: calc(100% - 20px); }
   .scale .container {
     height: 100%;
