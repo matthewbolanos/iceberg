@@ -1,3 +1,15 @@
+.disabled {
+  background: $light;
+}
+a.button.button-go-chill:active {
+  background: $assertive;
+  border-color: $assertive;
+  color: #FFF;
+}
+a.small.back:active {
+  border-color: $assertive;
+  color: #FFF;
+}
 .title {
   font-weight: bold;
 }
@@ -18,12 +30,8 @@
   }
 }
 .actual {
-  background: #FFF;
-  top: -1000px;
-}
-.starting {
   background: $orange;
-  top: -100px;
+  top: -1000px;
 }
 .optimal {
   background: $blue;
@@ -34,7 +42,7 @@
   font-size: 12px;
   position: absolute;
   right: 10px;
-  top: 65px;
+  top: 115px;
   text-transform: uppercase;
 }
 .scale {
@@ -42,7 +50,7 @@
   position: absolute;
   left: 10px;
   right: 10px;
-  top: 100px;
+  top: 150px;
   width: calc(100% - 20px);
   .container {
     height: 100%;

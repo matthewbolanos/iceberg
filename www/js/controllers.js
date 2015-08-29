@@ -6,13 +6,23 @@
     .controller("BeerStatusController", BeerStatusController)
     .controller("BeerAnimationsController", BeerAnimationsController);
 
-  function BeerStatusController($scope, BeerFormService, $ionicPopup, MediaService, ScaleService) {
+  function BeerStatusController($scope, $state, BeerFormService, $ionicPopup, MediaService, ScaleService) {
     var vm = this;
-    this.model = BeerFormService;
+    vm.model = BeerFormService;
     vm.scaleService = ScaleService;
+
+    console.log(BeerFormService.servingTemp);
+
+    if (!BeerFormService.servingTemp) {
+      $state.go('home');
+    }
 
     // An alert dialog
     $scope.showWarningAlert = function() {
+      if (vm.model.alarm)
+        MediaService.loadMedia('sound/horn.mp3').then(function(media) {
+          media.play();
+        });
       var alertPopup = $ionicPopup.alert({
         template: 'Your beer is in the<br/><strong>danger zone!</strong><br/>Retrieve it soon.',
         buttons: [
@@ -21,6 +31,10 @@
       });
     };
     $scope.showReadyAlert1 = function() {
+      if (vm.model.alarm)
+        MediaService.loadMedia('sound/horn.mp3').then(function(media) {
+          media.play();
+        });
       var alertPopup = $ionicPopup.alert({
         template: 'It\s<br/><strong>beer</strong><br/>time!',
         buttons: [
@@ -29,6 +43,10 @@
       });
     };
     $scope.showReadyAlert2 = function() {
+      if (vm.model.alarm)
+        MediaService.loadMedia('sound/horn.mp3').then(function(media) {
+          media.play();
+        });
       var alertPopup = $ionicPopup.alert({
         template: 'Your<br/><strong>beer</strong><br/>is ready!',
         buttons: [
@@ -38,10 +56,23 @@
     };
   }
 
-  function FormController($scope, $ionicModal, BeerService, BeerFormService) {
+  function FormController($scope, $state, $ionicModal, BeerService, BeerFormService) {
     $scope.beers = BeerService.getBeers();
 
     $scope.model = BeerFormService;
+
+    $scope.chill = function () {
+      if (BeerFormService.servingTemp) {
+        $state.go('beer-status');
+      } else {
+        return true;
+      }
+    };
+
+    $scope.ready = function () {
+      console.log(!!BeerFormService.servingTemp);
+      return !!BeerFormService.servingTemp;
+    };
 
     $ionicModal.fromTemplateUrl('templates/beer-selection.html', {
       scope: $scope,
