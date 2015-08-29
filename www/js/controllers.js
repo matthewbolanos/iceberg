@@ -178,7 +178,7 @@
 
           },
           function(result) {
-            if (result.x < 8 && result.x > -8) {
+            if (result.x < 10 && result.x > -10) {
               updateBeerAnimation(-result.x*1.8)
             }
         });
