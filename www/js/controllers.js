@@ -10,6 +10,38 @@
     vm.model = BeerFormService;
     vm.optimal = {
       'top': ScaleService.calculate(BeerFormService.servingTemp) + 'px'
+    }
+  }
+
+  function BeerStatusController($scope, BeerFormService, $ionicPopup, MediaService) {
+    var vm = this;
+    this.model = BeerFormService;
+
+
+    // An alert dialog
+    $scope.showWarningAlert = function() {
+      var alertPopup = $ionicPopup.alert({
+        template: 'Your beer is in the<br/><strong>danger zone!</strong><br/>Retrieve it soon.',
+        buttons: [
+          { text: 'Oh no!' },
+        ]
+      });
+    };
+    $scope.showReadyAlert1 = function() {
+      var alertPopup = $ionicPopup.alert({
+        template: 'It\s<br/><strong>beer</strong><br/>time!',
+        buttons: [
+          { text: 'Oh Yeah!' },
+        ]
+      });
+    };
+    $scope.showReadyAlert2 = function() {
+      var alertPopup = $ionicPopup.alert({
+        template: 'Your<br/><strong>beer</strong><br/>is ready!',
+        buttons: [
+          { text: 'Sweet!' },
+        ]
+      });
     };
   }
 
@@ -32,7 +64,25 @@
     };
     $scope.selectBeer = function(beer) {
       $scope.model.beer = beer;
-      $scope.model.servingTemp = 52;
+      switch (beer) {
+        case "Craft/Malt Beer":
+          $scope.model.servingTemp = 52;
+        break;
+        case "Standard Ale":
+        case "Amber Lager":
+        case "Dark Lager":
+        case "Cider":
+          $scope.model.servingTemp = 46;
+        break;
+        case "Pale Lager":
+        case "Light Ale":
+          $scope.model.servingTemp = 41;
+        break;
+        case "Light Beer":
+          $scope.model.servingTemp = 34;
+        break;
+      }
+
       $scope.modal.hide();
     }
     //Cleanup the modal when we're done with it!
