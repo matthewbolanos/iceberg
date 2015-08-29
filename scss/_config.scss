@@ -16,13 +16,17 @@ $dark:                            #444 !default;
 */
 
 
-$dark:						#272822;
-$assertive:					#c1a64d;
+$dark:						#262626;
+$assertive:				#c1a64d;
 $light:						#a2acb1;
+$blue:            #7BEEFF;
+$orange:          #FF6633;
 
 $base-background-color: 	$dark;
+$bar-footer-height:			75px;
 
 @import "mixins/animations";
+@import "elements/status";
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;

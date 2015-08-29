@@ -1,6 +1,6 @@
 <ion-view class="beerStatusView">
   <ion-pane ng-controller="BeerStatusController as vm">
-    <h1 class="title">{{vm.model.beer}}</h1>
+    <h1 class="title" on-hold="showReadyAlert1()">{{vm.model.beer}}</h1>
 
     <div ng-controller="BeerAnimationsController as bac">
       <div class="beerAnimation">
@@ -17,6 +17,59 @@
     </div>
 
     <a class="button button-container pull-left back" href="javascript: window.history.go(-1)">Back</a>
+
+    <span class="system">&deg Fahrenheit</span>
+    <div class="scale">
+      <div class="marker actual" ng-show="vm.model.servingTemp" ng-style="{'top': vm.scaleService.calculate(vm.model.currentTemp)+ 'px'}">
+        <span>Actual</span>
+      </div>
+      <div class="marker optimal" ng-show="vm.model.servingTemp" ng-style="{'top': vm.scaleService.calculate(vm.model.servingTemp)+ 'px'}">
+        <span>Optimal</span>
+      </div>
+      <div class="marker starting">
+        <span>Starting</span>
+      </div>
+      <div class="container">
+        <div class="notch">
+          <div class="ten"></div>
+          <span>80&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>70&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>60&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>50&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>40&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>30&deg</span>
+          <div class="five"></div>
+        </div>
+        <div class="notch">
+          <div class="ten"></div>
+          <span>20&deg</span>
+        </div>
+      </div>
+    </div>
+
+   <div class="half">
+      <a ui-sref="home" class="button button-container small back">Back</a>
+    </div>
 
   </ion-pane>
 </ion-view>
