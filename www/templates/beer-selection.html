@@ -1,6 +1,6 @@
 <ion-modal-view>
     <ion-content>
-	    <div class="list">
+	    <div class="list beer-list">
 			<a class="item" >
 				{{beer}}
 			</a>
@@ -14,7 +14,7 @@
 			</div>
 		</div>
     </ion-content>
-    <ion-footer-bar>
+    <ion-footer-bar ng-click="closeModal()">
 	  <h1 class="title">Cancel</h1>
 	</ion-footer-bar>
 </ion-modal-view>

@@ -26,7 +26,7 @@
 
   function BeerFormService() {
     model = {
-      beer: "Surly Brewing Darkness",
+      beer: "",
       container: "bottle",
       containerSize: "12oz",
       servingTemp: 52,
