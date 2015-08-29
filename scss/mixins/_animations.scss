@@ -55,21 +55,21 @@
 
 @include keyframes(bubbly) {
   0% {
-    -ms-transform: translate(0, 20px); /* IE 9 */
-    -webkit-transform: translate(0, 20px); /* Safari */
-    transform: translate(0, 20px);
+    -ms-transform: translateY(20px); /* IE 9 */
+    -webkit-transform: translateY(20px); /* Safari */
+    transform: translateY(20px);
     opacity: 0;
   }
   50% {
-    -ms-transform: translate(0, 0px); /* IE 9 */
-    -webkit-transform: translate(0, 0px); /* Safari */
-    transform: translate(0, 0px);
+    -ms-transform: translateY(20px); /* IE 9 */
+    -webkit-transform: translateY(20px); /* Safari */
+    transform: translateY(20px);
     opacity: 1;
   }
   100% {
-    -ms-transform: translate(0,-50px); /* IE 9 */
-    -webkit-transform: translate(0,-50px); /* Safari */
-    transform: translate(0,-50px);
+    -ms-transform: translateY(-50px); /* IE 9 */
+    -webkit-transform: translateY(-50px); /* Safari */
+    transform: translateY(-50px);
     opacity: 0;
   }
 }
