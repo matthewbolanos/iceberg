@@ -45,7 +45,7 @@
     };
 
     function calculate(deg) {
-      return (400 / 60) * deg;
+      return (400 / 60) * (80 - deg);
     }
 
   }
