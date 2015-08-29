@@ -22,10 +22,10 @@
       templateUrl: 'templates/list.html',
       controller: 'ListController'
     })
-    .state('animations', {
-      url: '/animations',
-      templateUrl: 'templates/animations.html',
-      controller: 'AnimationController'
+    .state('beerReview', {
+      url: '/beerReview',
+      templateUrl: 'templates/beerReview.html',
+      controller: 'BeerReviewController'
     })
     $urlRouterProvider.otherwise('/')
   }
