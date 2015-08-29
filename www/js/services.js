@@ -3,7 +3,8 @@
   angular
     .module('app.services', [])
     .factory('BeerService', BeerService)
-    .factory('BeerFormService', BeerFormService);
+    .factory('BeerFormService', BeerFormService)
+    .factory('ScaleService', ScaleService);
 
   function BeerService() {
     var beers = {};
@@ -31,6 +32,16 @@
       alarm: true
     }
     return model;
+  }
+
+  function ScaleService() {
+    return {
+      calculate: calculate
+    };
+
+    function calculate(deg) {
+      return (400 / 60) * deg;
+    }
   }
 
 })();

@@ -5,9 +5,12 @@
     .controller('FormController', FormController)
     .controller("BeerStatusController", BeerStatusController);
 
-  function BeerStatusController($scope, BeerFormService) {
+  function BeerStatusController($scope, BeerFormService, ScaleService) {
     var vm = this;
-    this.model = BeerFormService;
+    vm.model = BeerFormService;
+    vm.optimal = {
+      'top': ScaleService.calculate(BeerFormService.servingTemp) + 'px'
+    };
   }
 
   function FormController($scope, $ionicModal, BeerService, BeerFormService) {
