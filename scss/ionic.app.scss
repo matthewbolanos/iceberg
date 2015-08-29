@@ -246,6 +246,30 @@ hr {
 }
 
 
+.popup-head {
+	display:none;
+}
+.popup-body {
+	padding: 35px 10px;
+	text-transform: uppercase;
+	text-align:center;
+	font-size: 1.3em;
+	line-height:1.5em;
+
+	strong {
+		color: $assertive;
+		font-size:1.6em;
+	}
+}
+
+.popup-buttons {
+	padding:0;
+	min-height: 55px;
+
+	button{
+		text-transform: uppercase;
+	}
+}
 
 a {
   //@include animation('testSpin' 5s 0s);

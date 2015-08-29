@@ -5,9 +5,36 @@
     .controller('FormController', FormController)
     .controller("BeerStatusController", BeerStatusController);
 
-  function BeerStatusController($scope, BeerFormService) {
+  function BeerStatusController($scope, BeerFormService, $ionicPopup) {
     var vm = this;
     this.model = BeerFormService;
+
+
+    // An alert dialog
+    $scope.showWarningAlert = function() {
+      var alertPopup = $ionicPopup.alert({
+        template: 'Your beer is in the<br/><strong>danger zone!</strong><br/>Retrieve it soon.',
+        buttons: [
+          { text: 'Oh no!' },
+        ]
+      });
+    };
+    $scope.showReadyAlert1 = function() {
+      var alertPopup = $ionicPopup.alert({
+        template: 'It\s<br/><strong>beer</strong><br/>time!',
+        buttons: [
+          { text: 'Oh Yeah!' },
+        ]
+      });
+    };
+    $scope.showReadyAlert2 = function() {
+      var alertPopup = $ionicPopup.alert({
+        template: 'Your<br/><strong>beer</strong><br/>is ready!',
+        buttons: [
+          { text: 'Sweet!' },
+        ]
+      });
+    };
   }
 
   function FormController($scope, $ionicModal, BeerService, BeerFormService) {

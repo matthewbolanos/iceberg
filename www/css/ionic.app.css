@@ -7951,3 +7951,22 @@ hr {
 .pull-right {
   float: right; }
 
+.popup-head {
+  display: none; }
+
+.popup-body {
+  padding: 35px 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.5em; }
+  .popup-body strong {
+    color: #c1a64d;
+    font-size: 1.6em; }
+
+.popup-buttons {
+  padding: 0;
+  min-height: 55px; }
+  .popup-buttons button {
+    text-transform: uppercase; }
+
