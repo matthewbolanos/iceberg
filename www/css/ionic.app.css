@@ -71,6 +71,99 @@ $dark:                            #444 !default;
     -webkit-transform: rotate(500deg);
     transform: rotate(500deg); } }
 
+.title {
+  font-weight: bold; }
+
+.marker {
+  background: red;
+  height: 1px;
+  position: absolute;
+  top: 200px;
+  width: 100%; }
+  .marker span {
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    padding-left: 5px;
+    position: absolute;
+    top: -20px;
+    text-transform: uppercase; }
+
+.actual {
+  background: #FFF;
+  top: 200px; }
+
+.starting {
+  background: #FF6633;
+  top: 100px; }
+
+.optimal {
+  background: #7BEEFF;
+  top: 250px; }
+
+.system {
+  color: #c1a64d;
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  top: 65px;
+  text-transform: uppercase; }
+
+.scale {
+  height: 400px;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 100px;
+  width: calc(100% - 20px); }
+  .scale .container {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 85px; }
+  .scale .notch {
+    height: calc(100% / 6);
+    position: relative; }
+    .scale .notch span {
+      color: #FFF;
+      font-size: 15px;
+      padding: 5px 10px 0 0;
+      position: absolute;
+      top: -14px;
+      left: 0; }
+    .scale .notch .ten {
+      background: #FFF;
+      display: block;
+      height: 1px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60%; }
+    .scale .notch .five {
+      background: #AAA;
+      height: 1px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 40%; }
+
+.line {
+  height: 150px;
+  overflow: auto;
+  padding: 0 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  .line .half {
+    float: left;
+    width: 50%; }
+  .line a.small {
+    color: #FFF;
+    display: block;
+    margin: 0 auto;
+    padding-top: 1px;
+    width: 150px; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
