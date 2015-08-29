@@ -2,22 +2,14 @@
 
   angular
     .module('app.controllers', [])
-    .controller('ListController', ListController)
     .controller("BeerReviewController", BeerReviewController);
-
 
   function BeerReviewController() {
     var vm = this;
+    alert("yes")
   }
 
-  function ListController() {
-
-  }
-
-  window.AnimationController = AnimationController;
-
-  // Just testing out some animation stuffs
-  function AnimationController() {
+  function Animations() {
     var vm = this;
     var Sprite = {
       x: 0,
@@ -43,7 +35,6 @@
 
     // Definition
     _.extend(vm, {
-      name: "Mike",
       selectedRange: 0,
       setupBeerSprites: setupBeerSprites,
       updateBeerAnimation: updateBeerAnimation,

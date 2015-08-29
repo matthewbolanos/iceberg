@@ -17,11 +17,6 @@
 
   function AppConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-    .state('home', {
-      url: '/',
-      templateUrl: 'templates/list.html',
-      controller: 'ListController'
-    })
     .state('beerReview', {
       url: '/beerReview',
       templateUrl: 'templates/beerReview.html',
