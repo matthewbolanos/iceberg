@@ -150,10 +150,10 @@
       sprites.glass.width = 300;
       sprites.glass.height = 535;
       sprites.glass.offsetX = -90;
-      sprites.liquid.width = 150;
-      sprites.liquid.height = 236;
-      sprites.liquid.offsetY = 515-sprites.liquid.height;
-      sprites.liquid.offsetX = -20;
+      sprites.liquid.width = 235;
+      sprites.liquid.height = 465;
+      sprites.liquid.offsetY = 270;
+      sprites.liquid.offsetX = -40;
       sprites.drops.width = 37;
       sprites.drops.height = 48;
       sprites.drops.y = 190;
@@ -166,8 +166,6 @@
       sprites.temp.x = 0;
       updateSprites(true);
     }
-
-    window.updateBeerAnimation = updateBeerAnimation;
 
     function updateBeerAnimation(degree) {
       sprites.drops.degree = degree;
@@ -185,6 +183,8 @@
         updateSpriteCSS();
       }, 5);
     }
+
+    window.updateBeerAnimation = updateBeerAnimation;
 
     function updateSpriteCSS() {
       _.each(sprites, function(sprite, name) {

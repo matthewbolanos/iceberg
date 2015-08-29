@@ -84,6 +84,7 @@ h1.title {
     }
   }
   .drops {
+    @include animation(bubbly 5s 1s infinite);
     position: absolute;
     top: 0;
     left: 0;

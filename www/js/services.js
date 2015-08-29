@@ -44,7 +44,7 @@
         model.currentTemp = response.data.temperature.toFixed(1);
         $timeout(function() {
           getUpdates($timeout, $http);
-        }, 5000);
+        }, 2000);
       });
     }
 
