@@ -114,7 +114,7 @@
           $scope.model.servingTemp = 34;
         break;
       }
-
+      $scope.model.alerted = false;
       $scope.modal.hide();
     }
     //Cleanup the modal when we're done with it!
